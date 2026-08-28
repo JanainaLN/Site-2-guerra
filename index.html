@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Segunda Guerra Mundial </title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
   </head>
@@ -93,5 +94,100 @@ Pouco tempo depois, em <strong>1º de setembro de 1939</strong>a invasão da Pol
 
 <strong>E a partir daquele momento, a história do mundo mudaria para sempre.</strong>
 </section>
+
+<section class="minha-linha-do-tempo">
+
+<h2>LINHA DO TEMPO DA SEGUNDA GUERRA MUNDIAL</h2>
+
+<section class="linha-do-tempo">
+
+  <div class="ano">
+    <button onclick="mostrarEvento('evento1939')">1939</button>
+    <div id="evento1939" class="evento">
+      <h3>Invasão da Polônia</h3>
+      <p>Em 1º de setembro de 1939, a Alemanha invadiu a Polônia. A invasão levou o Reino Unido e a França a declararem guerra à Alemanha, dando início à Segunda Guerra Mundial na Europa.</p>
+    </div>
+  </div>
+
+  <div class="ano">
+    <button onclick="mostrarEvento('evento1940')">1940</button>
+    <div id="evento1940" class="evento">
+      <h3>Derrota da França e Batalha da Grã-Bretanha</h3>
+      <p>A Alemanha derrotou a França e ocupou grande parte de seu território. Depois, a Alemanha tentou enfraquecer o Reino Unido durante a Batalha da Grã-Bretanha.</p>
+    </div>
+  </div>
+
+  <div class="ano">
+    <button onclick="mostrarEvento('evento1941')">1941</button>
+    <div id="evento1941" class="evento">
+      <h3>Invasão da URSS e Pearl Harbor</h3>
+      <p>A Alemanha invadiu a União Soviética. No mesmo ano, o Japão atacou Pearl Harbor, levando os Estados Unidos a entrarem oficialmente na guerra.</p>
+    </div>
+  </div>
+
+  <div class="ano">
+    <button onclick="mostrarEvento('evento1942')">1942</button>
+    <div id="evento1942" class="evento">
+      <h3>Stalingrado e mudança no rumo da guerra</h3>
+      <p>A Batalha de Stalingrado começou a representar uma importante virada contra a Alemanha, fortalecendo o avanço das forças soviéticas.</p>
+    </div>
+  </div>
+
+  <div class="ano">
+    <button onclick="mostrarEvento('evento1943')">1943</button>
+    <div id="evento1943" class="evento">
+      <h3>Avanço dos Aliados e queda de Mussolini</h3>
+      <p>Os Aliados avançaram em diferentes frentes. Na Itália, Benito Mussolini foi retirado do poder, enfraquecendo o governo fascista italiano.</p>
+    </div>
+  </div>
+
+  <div class="ano">
+    <button onclick="mostrarEvento('evento1944')">1944</button>
+    <div id="evento1944" class="evento">
+      <h3>Dia D</h3>
+      <p>Em 6 de junho de 1944, os Aliados desembarcaram na Normandia, na França. A operação abriu uma importante frente de combate contra a Alemanha na Europa Ocidental.</p>
+    </div>
+  </div>
+
+  <div class="ano">
+  <button onclick="mostrarEvento('evento1945')">1945</button>
+  <div id="evento1945" class="evento">
+    <h3>Queda de Berlim, morte de Hitler e rendição alemã</h3>
+    <p>Em 1945, as forças soviéticas avançaram sobre Berlim. Hitler morreu em abril e, pouco depois, a Alemanha se rendeu, encerrando a guerra na Europa.</p>
+
+    <h3>Hiroshima, Nagasaki e rendição do Japão</h3>
+    <p>Em agosto de 1945, os Estados Unidos lançaram bombas atômicas sobre Hiroshima e Nagasaki. O Japão anunciou sua rendição em agosto, encerrando a Segunda Guerra Mundial.</p>
+  </div>
+ </div>
+</section>
+
+</section>
+
+
+<script>
+
+function mostrarEvento(id) {
+
+  var posicao = window.scrollY;
+  var eventos = document.getElementsByClassName("evento");
+  var eventoSelecionado = document.getElementById(id);
+
+  if (eventoSelecionado.style.display == "block") {
+
+    eventoSelecionado.style.display = "none";
+
+    window.scrollTo(0, posicao);
+
+  } else {
+
+    for (var i = 0; i < eventos.length; i++) {
+      eventos[i].style.display = "none";
+    }
+
+    eventoSelecionado.style.display = "block";
+  }
+}
+
+</script>
 </body>
 </html>
